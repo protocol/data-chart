@@ -1,0 +1,12 @@
+apiVersion: v2
+name: orchestrator
+description: A Helm chart for managing an orchestrator such as Argo
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+dependencies:
+  - name: argo-workflows
+    version: "0.16.8"
+    repository: "https://argoproj.github.io/argo-helm"
+    alias: workflows
+    condition: workflows.enabled

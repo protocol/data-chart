@@ -1,0 +1,42 @@
+serviceAccount:
+  create: true
+  annotations: {}
+  name: &name "argo"
+
+rbac:
+  create: true
+  name: *name
+
+workflows:
+  enabled: true
+
+  singleNamespace: true
+
+  executor:
+    securityContext: &securityContext
+      runAsNonRoot: true
+      runAsUser: 8737
+
+  controller:
+    workflowNamespaces:
+      - *name
+
+    workflowDefaults:
+      archiveLogs: true
+      serviceAccountName: *name
+
+    podSecurityContext: *securityContext
+
+  workflow:
+    rbac:
+      create: true
+    serviceAccount:
+      create: true
+      name: workflow
+
+  mainContainer:
+    securityContext: *securityContext
+
+  server:
+    extraArgs: [ --auth-mode=server ]
+    podSecurityContext: *securityContext
