@@ -40,3 +40,5 @@ workflows:
   server:
     extraArgs: [ --auth-mode=server ]
     podSecurityContext: *securityContext
+    serviceType: "ClusterIP"
+    loadBalancerIP: ""
