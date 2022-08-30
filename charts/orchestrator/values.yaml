@@ -1,11 +1,6 @@
-serviceAccount:
-  create: true
-  annotations: {}
-  name: &name "argo"
-
 rbac:
   create: true
-  name: *name
+  name: &name "argo"
 
 workflows:
   enabled: true
@@ -33,6 +28,7 @@ workflows:
     serviceAccount:
       create: true
       name: workflow
+      annotations: {}
 
   mainContainer:
     securityContext: *securityContext
