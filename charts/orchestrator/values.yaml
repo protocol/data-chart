@@ -38,3 +38,9 @@ workflows:
     podSecurityContext: *securityContext
     serviceType: "ClusterIP"
     loadBalancerIP: ""
+
+  artifactRepository:
+    archiveLogs: true
+    gcs: {}
+    s3: {}
+    useDefaultArtifactRepo: false
