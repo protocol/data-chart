@@ -41,6 +41,7 @@ workflows:
 
   artifactRepository:
     archiveLogs: true
-    gcs: {}
+    gcs:
+      keyFormat: "{{workflow.namespace}}/{{workflow.name}}/{{pod.name}}"
     s3: {}
     useDefaultArtifactRepo: false
