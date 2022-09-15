@@ -18,6 +18,10 @@ workflows:
 
     podSecurityContext: *securityContext
 
+    serviceAccount: &sa
+      create: true
+      name: "argo"
+
   workflow:
     rbac:
       create: true
@@ -34,6 +38,7 @@ workflows:
     podSecurityContext: *securityContext
     serviceType: "ClusterIP"
     loadBalancerIP: ""
+    serviceAccount: *sa
 
   artifactRepository:
     archiveLogs: true
