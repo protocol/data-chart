@@ -14,7 +14,7 @@ workflows:
 
     workflowDefaults:
       archiveLogs: true
-      serviceAccountName: argo
+      serviceAccountName: ""
 
     podSecurityContext: *securityContext
 
