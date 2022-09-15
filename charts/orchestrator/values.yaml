@@ -20,7 +20,7 @@ workflows:
 
     serviceAccount: &sa
       create: true
-      name: "argo"
+      name: ""
 
   workflow:
     rbac:
