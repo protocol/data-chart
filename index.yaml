@@ -3,6 +3,22 @@ entries:
   orchestrator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-09-15T13:26:32.745231982Z"
+    dependencies:
+    - alias: workflows
+      condition: workflows.enabled
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.17.1
+    description: A Helm chart for managing an orchestrator such as Argo
+    digest: beba24e8007361ab81917f42ecef4340f45988a25e787000de4c3b88eda99656
+    name: orchestrator
+    type: application
+    urls:
+    - https://github.com/protocol/data-charts/releases/download/orchestrator-0.2.6/orchestrator-0.2.6.tgz
+    version: 0.2.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-09-15T09:54:47.049046448Z"
     dependencies:
     - alias: workflows
@@ -145,4 +161,4 @@ entries:
     urls:
     - https://github.com/protocol/data-charts/releases/download/orchestrator-0.1.0/orchestrator-0.1.0.tgz
     version: 0.1.0
-generated: "2022-09-15T09:54:47.049094849Z"
+generated: "2022-09-15T13:26:32.745284483Z"
