@@ -2,7 +2,7 @@ apiVersion: v2
 name: orchestrator
 description: A Helm chart for managing an orchestrator such as Argo
 type: application
-version: 0.2.2
+version: 0.2.3
 appVersion: "1.16.0"
 dependencies:
   - name: argo-workflows

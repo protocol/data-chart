@@ -1,7 +1,3 @@
-rbac:
-  create: true
-  name: &name "argo"
-
 workflows:
   enabled: true
 
@@ -14,11 +10,11 @@ workflows:
 
   controller:
     workflowNamespaces:
-      - *name
+      - argo
 
     workflowDefaults:
       archiveLogs: true
-      serviceAccountName: *name
+      serviceAccountName: argo
 
     podSecurityContext: *securityContext
 
